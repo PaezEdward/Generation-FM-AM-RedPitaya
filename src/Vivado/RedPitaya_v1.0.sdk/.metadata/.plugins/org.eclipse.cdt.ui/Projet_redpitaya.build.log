@@ -1,0 +1,8 @@
+17:42:37 **** Auto Build of configuration Debug for project Projet_redpitaya ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+
+17:42:37 Build Finished (took 243ms)
+

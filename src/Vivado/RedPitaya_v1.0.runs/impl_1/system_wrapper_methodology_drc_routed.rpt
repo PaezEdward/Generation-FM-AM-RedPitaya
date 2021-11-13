@@ -1,0 +1,156 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Jul  5 16:39:48 2021
+| Host         : DESKTOP-SLP71EP running 64-bit major release  (build 9200)
+| Command      : report_methodology -file system_wrapper_methodology_drc_routed.rpt -pb system_wrapper_methodology_drc_routed.pb -rpx system_wrapper_methodology_drc_routed.rpx
+| Design       : system_wrapper
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 23
++-----------+----------+----------------------------------------------------+------------+
+| Rule      | Severity | Description                                        | Violations |
++-----------+----------+----------------------------------------------------+------------+
+| TIMING-2  | Warning  | Invalid primary clock source pin                   | 1          |
+| TIMING-4  | Warning  | Invalid primary clock redefinition on a clock tree | 3          |
+| TIMING-6  | Warning  | No common primary clock between related clocks     | 2          |
+| TIMING-7  | Warning  | No common node between related clocks              | 2          |
+| TIMING-16 | Warning  | Large setup violation                              | 1          |
+| TIMING-18 | Warning  | Missing input or output delay                      | 12         |
+| TIMING-27 | Warning  | Invalid primary clock on hierarchical pin          | 2          |
++-----------+----------+----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-2#1 Warning
+Invalid primary clock source pin  
+A primary clock system_i/util_ds_buf_3/U0/BUFG_O[0] is created on an inappropriate pin system_i/util_ds_buf_3/U0/BUFG_O[0]. It is recommended to create a primary clock only on a proper clock source (input port or primitive output pin with no timing arc)
+Related violations: <none>
+
+TIMING-4#1 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock system_i/SignalGenerator/clk_wiz_0/inst/clk_in1 is defined downstream of clock adc_clk and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-4#2 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock system_i/SignalGenerator/clk_wiz_2/inst/clk_in1 is defined downstream of clock adc_clk and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-4#3 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock system_i/util_ds_buf_3/U0/BUFG_O[0] is defined downstream of clock adc_clk and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Warning
+No common primary clock between related clocks  
+The clocks clk_fpga_0 and clk_out1_system_clk_wiz_2_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks clk_out1_system_clk_wiz_2_0]
+Related violations: <none>
+
+TIMING-6#2 Warning
+No common primary clock between related clocks  
+The clocks clk_fpga_0 and system_i/util_ds_buf_3/U0/BUFG_O[0] are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks system_i/util_ds_buf_3/U0/BUFG_O[0]]
+Related violations: <none>
+
+TIMING-7#1 Warning
+No common node between related clocks  
+The clocks clk_fpga_0 and clk_out1_system_clk_wiz_2_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks clk_out1_system_clk_wiz_2_0]
+Related violations: <none>
+
+TIMING-7#2 Warning
+No common node between related clocks  
+The clocks clk_fpga_0 and system_i/util_ds_buf_3/U0/BUFG_O[0] are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks system_i/util_ds_buf_3/U0/BUFG_O[0]]
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -3.454 ns between system_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[1]/C (clocked by clk_fpga_0) and system_i/SignalGenerator/carredephase180max_0/inst/carredephase180max_struct/mux1/pipe_44_22_reg[0][0]/D (clocked by clk_out1_system_clk_wiz_2_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[0] relative to clock(s) system_i/util_ds_buf_3/U0/BUFG_O[0]
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[1] relative to clock(s) system_i/util_ds_buf_3/U0/BUFG_O[0]
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[2] relative to clock(s) system_i/util_ds_buf_3/U0/BUFG_O[0]
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[3] relative to clock(s) system_i/util_ds_buf_3/U0/BUFG_O[0]
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[4] relative to clock(s) system_i/util_ds_buf_3/U0/BUFG_O[0]
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[5] relative to clock(s) system_i/util_ds_buf_3/U0/BUFG_O[0]
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[6] relative to clock(s) system_i/util_ds_buf_3/U0/BUFG_O[0]
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[7] relative to clock(s) system_i/util_ds_buf_3/U0/BUFG_O[0]
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[8] relative to clock(s) system_i/util_ds_buf_3/U0/BUFG_O[0]
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[9] relative to clock(s) system_i/util_ds_buf_3/U0/BUFG_O[0]
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on dac_rst_o relative to clock(s) system_i/util_ds_buf_3/U0/BUFG_O[0]
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on dac_sel_o relative to clock(s) system_i/util_ds_buf_3/U0/BUFG_O[0]
+Related violations: <none>
+
+TIMING-27#1 Warning
+Invalid primary clock on hierarchical pin  
+A primary clock system_i/SignalGenerator/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin system_i/SignalGenerator/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+TIMING-27#2 Warning
+Invalid primary clock on hierarchical pin  
+A primary clock system_i/SignalGenerator/clk_wiz_2/inst/clk_in1 is created on an inappropriate internal pin system_i/SignalGenerator/clk_wiz_2/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+

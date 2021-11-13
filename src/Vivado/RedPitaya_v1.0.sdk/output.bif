@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]E:\VIVADO_FPGA\Am_Ip_basique\Am_Ip_basique.sdk\test_am_fslb\Debug\test_am_fslb.elf
+	E:\VIVADO_FPGA\Am_Ip_basique\Am_Ip_basique.sdk\Test_am\Debug\Test_am.elf
+	E:\VIVADO_FPGA\Am_Ip_basique\Am_Ip_basique.sdk\system_wrapper_hw_platform_0\system_wrapper.bit
+}
